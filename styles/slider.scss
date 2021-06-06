@@ -1,0 +1,23 @@
+.custom-carousel-text {
+    padding-bottom: 20px !important;
+    color: white !important;
+}
+
+// as known as section-btn
+.custom-carousel-button {
+    margin-bottom: 20px;
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 15px 30px;
+    transition: 0.5s;
+}
+
+// as known as section-btn:hover
+.custom-carousel-button:hover {
+    background: #ffffff;
+    border-color: transparent;
+}
