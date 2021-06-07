@@ -769,10 +769,7 @@ const informationPageContent = {
 };
 
 const isInformationPageAvailable = (pageId) => {
-    if (informationPageIndex[pageId] === undefined) {
-        return false;
-    }
-    return true;
+    return informationPageContent[pageId] !== undefined;
 };
 
 const findSubjectNameById = (pageId) => {

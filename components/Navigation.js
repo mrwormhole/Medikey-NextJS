@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown, Button, ButtonToolbar, Image  } from "react-bootstrap";
-import medikeyLogo from "../images/medikey-logo.png";
-import medikeyLogoNew from "../images/medikey-logo-new.jpg";
+//import medikeyLogo from "../public/images/medikey-logo.png";
+import medikeyLogoNew from "../public/images/medikey-logo-new.jpg";
 
 class Navigation extends React.Component {
     
@@ -90,7 +90,7 @@ class Navigation extends React.Component {
                 <Navbar.Collapse>
                     <Nav>
                         
-                           {this.renderIfHomePage()}
+                        {this.renderIfHomePage()}
                        
                         
                         

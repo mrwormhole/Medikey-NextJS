@@ -1,9 +1,8 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 
-import country_img1 from "../images/istanbul-turkey.jpg";
-import country_img2 from "../images/tirana-albania.jpg";
-import country_img3 from "../images/berlin-germany.jpg";
+import country_img1 from "../public/images/istanbul-turkey.jpg";
+import country_img2 from "../public/images/tirana-albania.jpg";
+import country_img3 from "../public/images/berlin-germany.jpg";
 
 const Countries = () => {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Preloader = (props) => {
+export default function Preloader(props) {
     if (props.active === false) {
         return (<div></div>);
     }
@@ -12,5 +12,3 @@ const Preloader = (props) => {
         </section>
     );
 };
-
-export default Preloader;

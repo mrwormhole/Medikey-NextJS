@@ -2,7 +2,7 @@ import React from "react";
 
 import { Collapse, Well, Panel } from "react-bootstrap";
 
-const QuestionBox = (props) => {
+export default function QuestionBox(props) {
     return (
         <div className="main-box">
             <Panel className="question-box">
@@ -18,5 +18,3 @@ const QuestionBox = (props) => {
         </div>
     );
 };
-
-export default QuestionBox;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Steps = () => {
+export default function Steps() {
     return (
         <section id="steps">
           <div className="container">
@@ -35,5 +35,3 @@ const Steps = () => {
          </section>
     );
 };
-
-export default Steps;

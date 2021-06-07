@@ -1,10 +1,10 @@
 import React from "react";
 
-import testimonial_img1 from "../images/testimonial-image1.jpg";
-import testimonial_img2 from "../images/testimonial-image2.jpg";
-import testimonial_img3 from "../images/testimonial-image3.jpg";
-import testimonial_img4 from "../images/testimonial-image4.jpg";
-import testimonial_img5 from "../images/testimonial-image5.jpg";
+import testimonial_img1 from "../public/images/testimonial-image1.jpg";
+import testimonial_img2 from "../public/images/testimonial-image2.jpg";
+import testimonial_img3 from "../public/images/testimonial-image3.jpg";
+import testimonial_img4 from "../public/images/testimonial-image4.jpg";
+import testimonial_img5 from "../public/images/testimonial-image5.jpg";
 
 class Testimonial extends React.Component {
 

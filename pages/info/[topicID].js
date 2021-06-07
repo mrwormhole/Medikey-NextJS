@@ -1,29 +1,27 @@
 import React from "react";
-import { useParams, Redirect } from "react-router-dom";
+import { useRouter } from "next/router";
 import { Jumbotron } from "react-bootstrap";
 
-import { isInformationPageAvailable, findSubjectNameById, findSectionsById, showSubLinks } from "./Util";
-import Navigation from "./Navigation";
-import Footer from "./Footer";
-import info_img from "../images/info-pattern.png";
+import { isInformationPageAvailable, findSubjectNameById, findSectionsById, showSubLinks } from "../../components/Util";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
 
 const stylesJumbotron = {
     textAlign : "center",
     marginTop: "8rem",
     paddingTop: "5rem",
-    backgroundImage: `url(${info_img})`,
+    backgroundImage: `url("../../public/images/info-pattern.png")`,
     backgroundRepeat: "background-repeat: repeat",
     backgroundSize: "200px 200px",
 }
 
 function InformationPage() {
-    let { topicId } = useParams();
-    let availablity = isInformationPageAvailable(topicId);
+    const router = useRouter();
+    let { topicID } = router.query;
+    let availablity = isInformationPageAvailable(topicID);
 
     if(!availablity) {
-        return (
-            <Redirect to="/"/>
-        );
+        return router.push("/");
     }
 
     return (
@@ -32,12 +30,12 @@ function InformationPage() {
             <Jumbotron style={stylesJumbotron}>
                 <div>
                     <h2 style={{color: "white", letterSpacing: "0.25rem"}}>
-                        {findSubjectNameById(topicId)}
+                        {findSubjectNameById(topicID)}
                     </h2>
                 </div>
             </Jumbotron>
             <div>
-                {findSectionsById(topicId).map((section) => {
+                {findSectionsById(topicID).map((section) => {
                     return (
                         <div key={0} className="container">
                             <p className="information-title"> {section.title} </p>
@@ -46,7 +44,7 @@ function InformationPage() {
                     );
                 })}
 
-                {showSubLinks(parseInt(topicId))}
+                {showSubLinks(parseInt(topicID))}
             </div>
             <br />
     

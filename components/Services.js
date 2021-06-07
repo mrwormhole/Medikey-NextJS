@@ -1,6 +1,6 @@
 import React from "react";
 
-const Services = (props) => {
+export default function Services(props) {
     return (
         <section id="services">
           <div className="container">
@@ -56,5 +56,3 @@ const Services = (props) => {
         </section>
     );
 };
-
-export default Services;

@@ -1,10 +1,11 @@
 import React from "react";
-import course_img1 from "../images/aesthetics.jpg";
-import course_img2 from "../images/dentistry.jpg";
-import course_img3 from "../images/orthopedics.jpg";
-import course_img4 from "../images/obesity.jpg";
 
-const Treatments = () => {
+import course_img1 from "../public/images/aesthetics.jpg";
+import course_img2 from "../public/images/dentistry.jpg";
+import course_img3 from "../public/images/orthopedics.jpg";
+import course_img4 from "../public/images/obesity.jpg";
+
+export default function Treatments() {
     return (
      <section id="treatments">
        <div className="container">
@@ -117,5 +118,3 @@ const Treatments = () => {
     </section>
     );
 };
-
-export default Treatments;

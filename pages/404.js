@@ -1,6 +1,6 @@
 import React from "react";
 
-const NotFoundPage = () => {
+export default function NotFoundPage() {
     return (
         <div class="not-found-main">
             <div class="notfound-copy">

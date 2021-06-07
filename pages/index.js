@@ -1,9 +1,4 @@
 import Head from 'next/head'
-import styled from 'styled-components'
-
-const HomeComponent = styled.div`
-
-`
 
 export default function Home() {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import {Carousel} from "react-bootstrap";
 
-import slider_img1 from "../images/slider-image1.jpg";
-import slider_img2 from "../images/slider-image2.jpg";
-import slider_img3 from "../images/slider-image3.jpg";
+import slider_img1 from "../public/images/slider-image1.jpg";
+import slider_img2 from "../public/images/slider-image2.jpg";
+import slider_img3 from "../public/images/slider-image3.jpg";
 
 const stylesImagesMain = {
     width: "100%",
@@ -19,11 +19,9 @@ const stylesImagesOthers = {
     objectPosition: "0 0",
 };
 
-class Slider extends React.Component {
-
-    render() {
-        return (
-            <Carousel id="#home">
+export default function Slider() {
+    return (
+        <Carousel id="#home">
                 <Carousel.Item>
                     <img className="fluid" style={stylesImagesMain} alt="900x500" src={slider_img1} />
                     <Carousel.Caption>
@@ -49,8 +47,5 @@ class Slider extends React.Component {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-        );
-    }
+    );
 }
-
-export default Slider;
