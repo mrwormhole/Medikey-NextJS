@@ -1,10 +1,6 @@
 import React from "react";
 
-import country_img1 from "../public/images/istanbul-turkey.jpg";
-import country_img2 from "../public/images/tirana-albania.jpg";
-import country_img3 from "../public/images/berlin-germany.jpg";
-
-const Countries = () => {
+export default function Countries() {
     return (
         <section id="countries">
           <div className="container">
@@ -19,7 +15,7 @@ const Countries = () => {
                     <div className="col-md-4 col-sm-6">
                          <div className="countries-thumb">
                               <div className="countries-image">
-                                   <img src={country_img1} className="img-responsive" alt="" />
+                                   <img src="./images/istanbul-turkey.jpg" className="img-responsive" alt="" />
                               </div>
                               <div className="countries-info">
                                    <h3>Turkey</h3>
@@ -35,7 +31,7 @@ const Countries = () => {
                     <div className="col-md-4 col-sm-6">
                          <div className="countries-thumb">
                               <div className="countries-image">
-                                   <img src={country_img2} className="img-responsive" alt="" />
+                                   <img src="./images/tirana-albania.jpg" className="img-responsive" alt="" />
                               </div>
                               <div className="countries-info">
                                    <h3>Albania</h3>
@@ -51,7 +47,7 @@ const Countries = () => {
                     <div className="col-md-4 col-sm-6">
                          <div className="countries-thumb">
                               <div className="countries-image">
-                                   <img src={country_img3} className="img-responsive" alt="" />
+                                   <img src="./images/berlin-germany.jpg" className="img-responsive" alt="" />
                               </div>
                               <div className="countries-info">
                                    <h3>Germany</h3>
@@ -71,5 +67,3 @@ const Countries = () => {
         </section>
     );
 };
-
-export default Countries;

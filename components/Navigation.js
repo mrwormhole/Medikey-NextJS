@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown, Button, ButtonToolbar, Image  } from "react-bootstrap";
-//import medikeyLogo from "../public/images/medikey-logo.png";
-import medikeyLogoNew from "../public/images/medikey-logo-new.jpg";
+
 
 class Navigation extends React.Component {
     
@@ -81,7 +80,7 @@ class Navigation extends React.Component {
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a className="navbar-brand-title" href="/">
-                            <Image className="custom-navbar-logo" src={medikeyLogoNew} alt="Medikey Logo" circle />
+                            <Image className="custom-navbar-logo" src="./images/medikey-logo-new.jpg" alt="Medikey Logo" circle />
                             Medikey Health Consultancy
                         </a>
                     </Navbar.Brand>

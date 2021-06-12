@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Services(props) {
+export default function Services({handleSubmitButton}) {
     return (
         <section id="services">
           <div className="container">
@@ -38,7 +38,7 @@ export default function Services(props) {
 
                     <div className="col-md-offset-1 col-md-4 col-sm-12">
                          <div className="entry-form">
-                              <form onSubmit={props.handleSubmitButton}>
+                              <form onSubmit={handleSubmitButton}>
                                    <h2>Get a Quote</h2>
                                    <input type="text" name="full name" className="form-control" placeholder="Full name" id="fullname" required=""/>
 

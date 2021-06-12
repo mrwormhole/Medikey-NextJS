@@ -1,10 +1,5 @@
 import React from "react";
 
-import course_img1 from "../public/images/aesthetics.jpg";
-import course_img2 from "../public/images/dentistry.jpg";
-import course_img3 from "../public/images/orthopedics.jpg";
-import course_img4 from "../public/images/obesity.jpg";
-
 export default function Treatments() {
     return (
      <section id="treatments">
@@ -22,7 +17,7 @@ export default function Treatments() {
                          <div className="treatments-thumb">
                               <div className="treatments-top">
                                    <div className="treatments-image">
-                                        <img src={course_img2} className="img-responsive" alt="" />
+                                        <img src="./images/dentistry.jpg" className="img-responsive" alt="" />
                                    </div>
                               </div>
 
@@ -45,7 +40,7 @@ export default function Treatments() {
                          <div className="treatments-thumb">
                               <div className="treatments-top">
                                    <div className="treatments-image">
-                                        <img src={course_img1} className="img-responsive" alt="" />
+                                        <img src="./images/aesthetics.jpg" className="img-responsive" alt="" />
                                    </div>
                               </div>
 
@@ -70,7 +65,7 @@ export default function Treatments() {
                          <div className="treatments-thumb">
                               <div className="treatments-top">
                                    <div className="treatments-image">
-                                        <img src={course_img3} className="img-responsive" alt="" />
+                                        <img src="./images/orthopedics.jpg" className="img-responsive" alt="" />
                                    </div>
                               </div>
 
@@ -93,7 +88,7 @@ export default function Treatments() {
                          <div className="treatments-thumb">
                               <div className ="treatments-top">
                                    <div className="treatments-image">
-                                        <img src={course_img4} className="img-responsive" alt="" />
+                                        <img src="./images/obesity.jpg" className="img-responsive" alt="" />
                                    </div>
                               </div>
 

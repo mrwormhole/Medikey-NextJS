@@ -1,64 +1,103 @@
 import Head from 'next/head'
+import React, { useEffect } from "react"
+import Axios from "axios";
+
+import Preloader from "../components/Preloader";
+import Navigation from "../components/Navigation";
+import Slider from "../components/Slider";
+import Steps from "../components/Steps";
+import Services from "../components/Services";
+import Countries from "../components/Countries";
+import Treatments from "../components/Treatments";
+import Testimonial from "../components/Testimonial";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 export default function Home() {
+
+  <Head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="title" content="Medikey Health Consultancy - Health Tourism Company in UK &amp; Turkey" />
+    <meta name="description" content="Medikey Health Consultancy is a UK-based health tourism company which offers the best treatments with the best tours in Turkey." />
+    <meta name="keywords" content="health tourism uk, health tourism turkey, health tourism definitions, health tourism statistics, health tourism companies, health tourism examples, health tourism agency, health tourism activities, health tourism definition, health tourism turkey" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="10 days" />
+    <meta name="author" content="Medikey Health Consultancy" />   
+    <title>Medikey Health Consultancy</title>
+  </Head>
+
+  useEffect(() => {
+    var fadeTarget = document.getElementById("preloader"); 
+    setTimeout(() => { 
+      fadeTarget.style.display = "none";
+    }, 500);
+  })
+
+  function sendEmail(from_name,from_email,message) {
+    const data = {
+        from_name: from_name,
+        from_email: from_email,
+        to_email: "elifcihanaltinel@gmail.com",
+        to_name: "Medikey Health Consultants",
+        message : message
+    };
+    
+    Axios.post("https://medikeyhealth.co.uk.com/api/email", data);
+  }
+
+  function handleSubmitButton(e) {
+    e.preventDefault();
+
+    const name = e.target.elements.name.value;
+    const email = e.target.elements.email.value;
+    const message = e.target.elements.message.value;
+
+    if(!(name.trim() == "" ||  email.trim() == "")){
+        sendEmail(name,email,message);
+        e.target.elements.name.value = "";
+        e.target.elements.email.value = "";
+        e.target.elements.message.value = "";
+        console.log(`Email has sent with name: ${name} ,email: ${email} ,message: ${message} `);
+    } else {
+        console.log("Please fill the required(*) fields.");
+    }
+  }
+
+  function handleSubmitButtonForQuote() {
+    e.preventDefault();
+
+    const name = e.target.elements.fullname.value;
+    const email = e.target.elements.fullemail.value;
+    const treatment = e.target.elements.treatment.value;
+
+    if(!(name.trim() == "" ||  email.trim() == "")){
+        sendEmail(name,email,treatment);
+        e.target.elements.fullname.value = "";
+        e.target.elements.fullemail.value = "";
+        e.target.elements.treatment.value = "";
+        console.log(`Email has sent with name: ${name} ,email: ${email} ,treatment: ${treatment} `);
+    } else {
+        console.log("Please fill the required(*) fields.");
+    }
+  }
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+    <div>
+      <Preloader active={true}/>
+      <Navigation InHomePage={true} />
+      <Slider />
+      <Steps />
+      <Services handleSubmitButton={handleSubmitButtonForQuote}/>
+      <Countries />
+      <Treatments />
+      {/*<Testimonial />*/}
+      <Contact handleSubmitButton={handleSubmitButton} />
+      <Footer />
     </div>
-  )
+  );
 }

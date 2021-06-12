@@ -1,11 +1,5 @@
 import React from "react";
 
-import testimonial_img1 from "../public/images/testimonial-image1.jpg";
-import testimonial_img2 from "../public/images/testimonial-image2.jpg";
-import testimonial_img3 from "../public/images/testimonial-image3.jpg";
-import testimonial_img4 from "../public/images/testimonial-image4.jpg";
-import testimonial_img5 from "../public/images/testimonial-image5.jpg";
-
 class Testimonial extends React.Component {
 
      cleanUp(element) {
@@ -69,7 +63,7 @@ class Testimonial extends React.Component {
                                 <div className="custom-testimonial-card col-md-4 col-sm-4">
                                      <div className="item">
                                           <div className="tst-image">
-                                               <img src={testimonial_img1} className="img-responsive" alt="" />
+                                               <img src="./images/testimonial-image1.jpg" className="img-responsive" alt="" />
                                           </div>
                                           <div className="tst-author">
                                                <h4>Camila</h4>
@@ -89,7 +83,7 @@ class Testimonial extends React.Component {
                                 <div className="custom-testimonial-card col-md-4 col-sm-4">
                                      <div className="item">
                                           <div className="tst-image">
-                                               <img src={testimonial_img2} className="img-responsive" alt="" />
+                                               <img src="./images/testimonial-image2.jpg" className="img-responsive" alt="" />
                                           </div>
                                           <div className="tst-author">
                                                <h4>Jackson</h4>
@@ -109,7 +103,7 @@ class Testimonial extends React.Component {
                                 <div className="custom-testimonial-card col-md-4 col-sm-4">
                                      <div className="item">
                                           <div className="tst-image">
-                                               <img src={testimonial_img3} className="img-responsive" alt="" />
+                                               <img src="./images/testimonial-image3.jpg" className="img-responsive" alt="" />
                                           </div>
                                           <div className="tst-author">
                                                <h4>Abigail</h4>
@@ -129,7 +123,7 @@ class Testimonial extends React.Component {
                                 <div className="custom-testimonial-card col-md-4 col-sm-4">
                                      <div className="item">
                                           <div className="tst-image">
-                                               <img src={testimonial_img4} className="img-responsive" alt="" />
+                                               <img src="./images/testimonial-image4.jpg" className="img-responsive" alt="" />
                                           </div>
                                           <div className="tst-author">
                                                <h4>Andrio</h4>
@@ -148,7 +142,7 @@ class Testimonial extends React.Component {
                                 <div className="custom-testimonial-card col-md-4 col-sm-4">
                                      <div className="item">
                                           <div className="tst-image">
-                                               <img src={testimonial_img5} className="img-responsive" alt="" />
+                                               <img src="./images/testimonial-image5.jpg" className="img-responsive" alt="" />
                                           </div>
                                           <div className="tst-author">
                                                <h4>Alissa</h4>

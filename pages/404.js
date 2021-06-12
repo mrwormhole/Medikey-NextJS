@@ -51,5 +51,3 @@ export default function NotFoundPage() {
         </div>
     );
 };
-
-export default NotFoundPage;
