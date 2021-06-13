@@ -1,12 +1,13 @@
 import React from "react";
+import { SocialLinksProp}  from "../pages/index"
 
-export default function Footer() {
+export default function Footer(props: {socialLinks: SocialLinksProp}) {
     return (
         <footer id="footer">
           <div className="container">
                <div className="row">
 
-               <div className="col-md-4 col-sm-12">
+                    <div className="col-md-4 col-sm-12">
                          <div className="footer-info newsletter-form">
                               <div className="section-title">
                                    <h2>Newsletter Signup</h2>
@@ -26,9 +27,9 @@ export default function Footer() {
                     <div className="col-md-4 col-sm-6">
                          <div className="footer-info">
                               <ul className="social-icon">
-                                   <li><a href="#" className="fa fa-facebook-square"></a></li>
-                                   <li><a href="#" className="fa fa-twitter"></a></li>
-                                   <li><a href="#" className="fa fa-instagram"></a></li>
+                                   <li><a href={props.socialLinks.facebookURL} className="fa fa-facebook-square"></a></li>
+                                   <li><a href={props.socialLinks.twitterURL} className="fa fa-twitter"></a></li>
+                                   <li><a href={props.socialLinks.instragramURL} className="fa fa-instagram"></a></li>
                               </ul>
 
                               <div className="copyright-text"> 
@@ -54,8 +55,6 @@ export default function Footer() {
                               </div>
                          </div>
                     </div>
-
-                   
                     
                </div>
           </div>

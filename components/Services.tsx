@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function Services({handleSubmitButton}) {
+type ServicesProps = {
+     handleSubmitButton: (e: React.SyntheticEvent) => void
+}
+
+export default function Services({handleSubmitButton} : ServicesProps ) {
     return (
         <section id="services">
           <div className="container">
@@ -40,11 +44,11 @@ export default function Services({handleSubmitButton}) {
                          <div className="entry-form">
                               <form onSubmit={handleSubmitButton}>
                                    <h2>Get a Quote</h2>
-                                   <input type="text" name="full name" className="form-control" placeholder="Full name" id="fullname" required=""/>
+                                   <input type="text" name="full name" className="form-control" placeholder="Full name" id="fullname" required={true}/>
 
-                                   <input type="email" name="email" className="form-control" placeholder="Your email address" id="fullemail" required=""/>
+                                   <input type="email" name="email" className="form-control" placeholder="Your email address" id="fullemail" required={true}/>
 
-                                   <input type="text" name="treatment" className="form-control" placeholder="The treatment you are interested in" id="treatment" required=""/>
+                                   <input type="text" name="treatment" className="form-control" placeholder="The treatment you are interested in" id="treatment" required={true}/>
 
                                    <button className="submit-btn form-control" id="form-submit-quote">Send</button>
                               </form>

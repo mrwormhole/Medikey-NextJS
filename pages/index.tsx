@@ -10,13 +10,19 @@ import Services from "../components/Services";
 import Countries from "../components/Countries";
 import Treatments from "../components/Treatments";
 import Testimonial from "../components/Testimonial";
-import Contact from "../components/Contact";
+import Contact, { sendEmail, EmailProp } from "../components/Contact";
 import Footer from "../components/Footer";
+
+export type SocialLinksProp = {
+  facebookURL: string
+  twitterURL: string
+  instragramURL: string
+}
 
 export default function Home() {
 
   <Head>
-    <meta charset="utf-8" />
+    <meta charSet="utf-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -38,66 +44,51 @@ export default function Home() {
     }, 500);
   })
 
-  function sendEmail(from_name,from_email,message) {
-    const data = {
-        from_name: from_name,
-        from_email: from_email,
-        to_email: "elifcihanaltinel@gmail.com",
-        to_name: "Medikey Health Consultants",
-        message : message
+  function handleSubmitButtonForQuote(e: React.SyntheticEvent) {
+    e.preventDefault();
+    const target = e.target as typeof e.target & {
+          fullname: { value: string };
+          fullemail: { value: string };
+          treatment: { value: string};
     };
-    
-    Axios.post("https://medikeyhealth.co.uk.com/api/email", data);
-  }
-
-  function handleSubmitButton(e) {
-    e.preventDefault();
-
-    const name = e.target.elements.name.value;
-    const email = e.target.elements.email.value;
-    const message = e.target.elements.message.value;
+    const name = target.fullname.value;
+    const email = target.fullemail.value;
+    const treatment = target.treatment.value;
 
     if(!(name.trim() == "" ||  email.trim() == "")){
-        sendEmail(name,email,message);
-        e.target.elements.name.value = "";
-        e.target.elements.email.value = "";
-        e.target.elements.message.value = "";
-        console.log(`Email has sent with name: ${name} ,email: ${email} ,message: ${message} `);
-    } else {
-        console.log("Please fill the required(*) fields.");
-    }
-  }
-
-  function handleSubmitButtonForQuote() {
-    e.preventDefault();
-
-    const name = e.target.elements.fullname.value;
-    const email = e.target.elements.fullemail.value;
-    const treatment = e.target.elements.treatment.value;
-
-    if(!(name.trim() == "" ||  email.trim() == "")){
-        sendEmail(name,email,treatment);
-        e.target.elements.fullname.value = "";
-        e.target.elements.fullemail.value = "";
-        e.target.elements.treatment.value = "";
+        const ep: EmailProp = {
+          from_name: name,
+          from_email: email,
+          message: treatment,
+        };
+        sendEmail(ep);
+        target.fullname.value = "";
+        target.fullemail.value = "";
+        target.treatment.value = "";
         console.log(`Email has sent with name: ${name} ,email: ${email} ,treatment: ${treatment} `);
     } else {
         console.log("Please fill the required(*) fields.");
     }
   }
 
+  const socialLinks: SocialLinksProp = {
+    facebookURL: "https://www.facebook.com/medikeyhealth/",
+    twitterURL: "#",
+    instragramURL: "https://www.instagram.com/medikeyhealth/",
+  }
+
   return (
     <div>
-      <Preloader active={true}/>
-      <Navigation InHomePage={true} />
+      <Preloader active />
+      <Navigation onHomePage={true} socialLinks={socialLinks} />
       <Slider />
       <Steps />
       <Services handleSubmitButton={handleSubmitButtonForQuote}/>
       <Countries />
       <Treatments />
       {/*<Testimonial />*/}
-      <Contact handleSubmitButton={handleSubmitButton} />
-      <Footer />
+      <Contact />
+      <Footer socialLinks={socialLinks} />
     </div>
   );
 }

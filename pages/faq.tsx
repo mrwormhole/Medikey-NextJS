@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { Jumbotron, Grid, Row, Col } from "react-bootstrap";
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import QuestionBox from "../components/QuestionBox";
-import { Jumbotron, Grid, Row, Col } from "react-bootstrap";
+import { SocialLinksProp } from ".";
 
-const stylesJumbotron = {
+const stylesJumbotron: React.CSSProperties = {
     width: "100%",
     height: "400px",
     objectFit: "cover",
     objectPosition: "0 0",
-    backgroundImage: `url("../public/images/question-marks.png")`,
-    paddingTop: "18rem"
+    backgroundPosition: "center",
+    backgroundImage: `url("./images/question-marks.png")`,
+    paddingTop: "18rem",
 };
 
 
 export default function Faq() {
-    [isOpen, setIsOpen]= useState(false)
+    let [isOpen, setIsOpen]= useState<boolean>(false)
 
     useEffect(() => {
         setTimeout(() => {
@@ -24,9 +26,15 @@ export default function Faq() {
         }, 500)
     })
 
+    const socialLinks: SocialLinksProp = {
+        facebookURL: "https://www.facebook.com/medikeyhealth/",
+        twitterURL: "#",
+        instragramURL: "https://www.instagram.com/medikeyhealth/",
+      }
+
     return (
         <div>
-            <Navigation InHomePage={false} />
+            <Navigation onHomePage={false} socialLinks={socialLinks} />
             <Jumbotron style={stylesJumbotron}>
                 <h1 style={{textAlign: "center", color: "white"}}>Frequently Asked Questions</h1>  
             </Jumbotron>
@@ -84,7 +92,7 @@ export default function Faq() {
                 </Row>
             </Grid>
 
-            <Footer />
+            <Footer socialLinks={socialLinks} />
         </div>
     )
 }

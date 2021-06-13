@@ -60,8 +60,6 @@ export default function Countries() {
                          </div>
                     </div>
 
-                 
-
                </div>
           </div>
         </section>

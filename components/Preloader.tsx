@@ -1,8 +1,12 @@
 import React from "react";
 
-export default function Preloader(props) {
-    if (props.active === false) {
-        return (<div></div>);
+type PreloaderProps = {
+    active: boolean
+}
+
+export default function Preloader({active} : PreloaderProps) {
+    if (!active) {
+        return (<React.Fragment />);
     }
     return (
         <section id="preloader" className="preloader">

@@ -1,14 +1,15 @@
 import React from "react";
 import {Carousel} from "react-bootstrap";
 
-const stylesImagesMain = {
+//TODO number 1 candidate for styled components(2 vars down below)
+const stylesImagesMain : React.CSSProperties = {
     width: "100%",
     height: "650px",
     objectFit: "cover",
     objectPosition: "50 50",
 };
 
-const stylesImagesOthers = {
+const stylesImagesOthers : React.CSSProperties = {
     width: "100%",
     height: "650px",
     objectFit: "cover",

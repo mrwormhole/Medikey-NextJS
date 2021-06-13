@@ -22,3 +22,16 @@
     padding-bottom: 2rem;
     white-space: pre-line;
 }
+
+.custom-jumbotron {
+  text-align: center;
+  margin-top: 8rem; //14rem 526
+  padding-top: 5rem;
+  background-image: url("../public/images/info-pattern.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+
+  @media (max-width: 526px) {
+    margin-top: 14rem;
+  }
+}

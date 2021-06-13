@@ -2,16 +2,22 @@ import React from "react";
 
 import { Collapse, Well, Panel } from "react-bootstrap";
 
-export default function QuestionBox(props) {
+type QuestionBoxProps = {
+    question: string
+    answer: string
+    isOpen: boolean
+}
+
+export default function QuestionBox({question, isOpen, answer}: QuestionBoxProps) {
     return (
         <div className="main-box">
             <Panel className="question-box">
-                {props.question}
+                {question}
             </Panel>
-            <Collapse in={props.isOpen}>
+            <Collapse in={isOpen}>
                 <div>
                     <Well className="answer-box">
-                        {props.answer}
+                        {answer}
                     </Well>
                 </div>
             </Collapse>

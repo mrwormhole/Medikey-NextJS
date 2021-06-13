@@ -1,6 +1,6 @@
 import React from "react";
 
-const informationPageIndex = {
+const informationPageIndex: {[key: number]: string} = {
     601 : "Aesthetic Consultation",
     610 : "Lipofilling",
     611 : "Rhinoplasty",
@@ -69,7 +69,7 @@ const informationPageIndex = {
     1006: "Physiotherapy",
 };
 
-const informationPageContent = {
+const informationPageContent: {[key: number]: any[]} = {
     601: [
         {
             "title" : "Why Aesthetic Consultation?",
@@ -768,22 +768,22 @@ const informationPageContent = {
     ]
 };
 
-const isInformationPageAvailable = (pageId) => {
+const isInformationPageAvailable = (pageId: number) => {
     return informationPageContent[pageId] !== undefined;
 };
 
-const findSubjectNameById = (pageId) => {
+const findSubjectNameById = (pageId: number) => {
     return informationPageIndex[pageId];
 };
 
-const findSectionsById = (pageId) => {
+const findSectionsById = (pageId: number) => {
     if (informationPageContent[pageId] !== undefined) {
         return informationPageContent[pageId];
     }
     return;
 };
 
-const showSubLinks = (pageId) => {
+const showSubLinks = (pageId: number) => {
     switch(pageId) {
         case 601:
             return (
