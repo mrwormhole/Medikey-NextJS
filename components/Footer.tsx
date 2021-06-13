@@ -15,7 +15,7 @@ export default function Footer(props: {socialLinks: SocialLinksProp}) {
                               <div>
                                    <div className="form-group">
                                         <form action="#" method="get">
-                                             <input type="email" className="form-control" placeholder="Enter your email" name="email" id="email" required="" />
+                                             <input type="email" className="form-control" placeholder="Enter your email" name="email" id="email" required={true} />
                                              <input type="submit" className="form-control" name="submit" id="form-submit" value="Send me" />
                                         </form>
                                         <span><sup>*</sup> Please note - we do not spam your email.</span>
