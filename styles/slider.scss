@@ -6,18 +6,20 @@
 // as known as section-btn
 .custom-carousel-button {
     margin-bottom: 20px;
-    background: transparent;
+    background: #3F51B5;
     border-radius: 50px;
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 3px solid #f0f0f0;
+    color: #f0f0f0;
+    /* Add This */
+    box-shadow: 0 0 0 2px #3F51B5;
     font-size: inherit;
     font-weight: normal;
     padding: 15px 30px;
     transition: 0.5s;
 }
 
-// as known as section-btn:hover
 .custom-carousel-button:hover {
-    background: #ffffff;
-    border-color: transparent;
+    background: #f0f0f0;
+    color: #3F51B5;
+    box-shadow: 0 0 0 2px #3F51B5;
 }

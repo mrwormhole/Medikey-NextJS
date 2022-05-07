@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import React, { useEffect } from "react"
-import Axios from "axios";
 
 import Preloader from "../components/Preloader";
 import Navigation from "../components/Navigation";

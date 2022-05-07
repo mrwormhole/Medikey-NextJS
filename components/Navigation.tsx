@@ -87,10 +87,10 @@ export default function Navigation({socialLinks, onHomePage} : NavigationProps) 
                         </NavDropdown>
                         <NavDropdown eventKey={6} title="Body Aesthetics" id="basic-nav-dropdown">
                             <MenuItem href="/info/620" eventKey={6.20}>Hip-Butt</MenuItem> 
-                            <MenuItem href="/info/622" eventKey={6.21}>Sixpack</MenuItem> 
-                            <MenuItem href="/info/623" eventKey={6.22}>Liposuction</MenuItem> 
-                            <MenuItem href="/info/624" eventKey={6.23}>Brachioplasty</MenuItem> 
-                            <MenuItem href="/info/625" eventKey={6.24}>Abdominoplasty</MenuItem>
+                            <MenuItem href="/info/621" eventKey={6.21}>Sixpack</MenuItem> 
+                            <MenuItem href="/info/622" eventKey={6.22}>Liposuction</MenuItem> 
+                            <MenuItem href="/info/623" eventKey={6.23}>Brachioplasty</MenuItem> 
+                            <MenuItem href="/info/624" eventKey={6.24}>Abdominoplasty</MenuItem>
                         </NavDropdown>
                         <NavDropdown eventKey={6} title="Breast Aesthetics" id="basic-nav-dropdown">
                             <MenuItem href="/info/630" eventKey={6.30}>Breast Lifting</MenuItem> 

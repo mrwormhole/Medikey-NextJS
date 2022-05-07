@@ -10,7 +10,6 @@ import { SocialLinksProp } from "..";
 
 export function InformationPage() {
     const router: NextRouter = useRouter();
-    //let id: number
     const [id, setID] = useState<number | undefined>(0);
 
     useEffect(() => {
@@ -49,7 +48,7 @@ export function InformationPage() {
                     </h2>
                 </div>
             </Jumbotron>
-            <div>
+            <div style={{minHeight: "500px"}}>
                 {findSectionsById(id)?.map((section) => {
                     return (
                         <div key={0} className="container">

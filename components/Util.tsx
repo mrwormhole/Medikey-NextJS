@@ -9,7 +9,7 @@ const informationPageIndex: {[key: number]: string} = {
     614 : "Otoplasty",
     620 : "Hip-Butt",
     621 : "Sixpack",
-    622 : "Hiposuction",
+    622 : "Liposuction",
     623 : "Brachioplasty",
     624 : "Abdominoplasty",
     630 : "Breast Lifting",
